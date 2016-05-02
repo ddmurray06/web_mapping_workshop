@@ -1,4 +1,3 @@
--
 // Here is the javascript setup for a basic map:
 
 // Enter your mapbox map id here to reference it for the base layer,
@@ -34,5 +33,3 @@ featureLayer.on('ready', function(){
     })
     map.fitBounds(featureLayer.getBounds());
 })
-
-
