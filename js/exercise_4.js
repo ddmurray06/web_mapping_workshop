@@ -41,37 +41,3 @@ featureLayer.on('ready', function(){
   });
 });
 
-#info {
-      position:absolute; top: 10px; right: 10px; bottom: 10px; width: 260px;
-      background:#333; color: #fff;
-      padding:20px;
-      font-family: Arial, Helvetica, sans-serif;
-      opacity:0.9;
-      filter:alpha(opacity=80); /* For IE8 and earlier */
-}
-
-var clickHandler = function(e){
-  $('#info').empty();
-
-  var feature = e.target.feature;
-
-  $('#info').fadeIn(400,function(){
-    var info = '';
-
-    info += '<div>'
-    info += '<h2>' + feature.properties.name + '</h2>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.cuisine + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.phone + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.website + '</p>'
-    if(feature.properties.phone) info +=   '<p><a href="' + feature.properties.website + '">'  + feature.properties.website + '</a></p>'
-    info += '</div>'
-
-    $('#info').append(info);
-  });
-};
-
-featureLayer.on('ready', function(){
-  this.eachLayer(function(layer){
-    layer.on('click', clickHandler);
-  });
-});
