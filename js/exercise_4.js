@@ -17,7 +17,7 @@ map.setView([39, -96], 4);
 
 // Great, now we have a basic web map!
 
-var dataFileToAdd = 'data/restaurants.geojson;
+var dataFileToAdd = 'data/restaurants.geojson';
 
 var featureLayer = L.mapbox.featureLayer();
 	featureLayer.loadURL(dataFileToAdd);
@@ -32,5 +32,4 @@ featureLayer.on('ready', function(){
         }))
     })
     map.fitBounds(featureLayer.getBounds());
-
 })
