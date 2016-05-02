@@ -41,12 +41,3 @@ featureLayer.on('ready', function(){
   });
 });
 
-
-#info {
-      position:absolute; top: 10px; right: 10px; bottom: 10px; width: 260px;
-      background:#333; color: #fff;
-      padding:20px;
-      font-family: Arial, Helvetica, sans-serif;
-      opacity:0.9;
-      filter:alpha(opacity=80); /* For IE8 and earlier */
-}
