@@ -53,14 +53,15 @@ featureLayer.on('ready', function(){
 //}
 
 
+//UNCOMMENT TEST
+featureLayer.on('ready', function(){
+  this.eachLayer(function(layer){
+    layer.bindPopup('Welcome to ' + layer.feature.properties.name);
+  });
+});
 
-//featureLayer.on('ready', function(){
-//  this.eachLayer(function(layer){
-//    layer.bindPopup('Welcome to ' + layer.feature.properties.name);
-//  });
-//});
 
-
+// WORKS BELOW
 
 var clickHandler = function(e){
   $('#info').empty();
